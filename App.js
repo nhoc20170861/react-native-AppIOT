@@ -2,7 +2,7 @@
 // import React in our code
 import React, { useState } from "react";
 
-import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from "react-native";
+import { Alert, Text, View, TouchableOpacity, ScrollView } from "react-native";
 import Task from './components/Task/index'
 import styles from "./App.component.style";
 import Form from "./components/Form";
@@ -70,9 +70,32 @@ export default function App() {
   };
 
   const [taskList, setTaskList] = useState([]);
+
   const handleAddTask = (task) => {
     //add Task
     setTaskList([...taskList, task]);
+  };
+  const handleDeleteTask = (index) => {
+    Alert.alert(
+      "Alert !!!",
+      "Do you want to delete this task?",
+      [
+        {
+          text: "OK",
+          onPress: () => {
+            let taskListTmp = [...taskList];
+            taskListTmp.splice(index, 1);
+            setTaskList(taskListTmp);
+          },
+          style: "default"
+        },
+        {
+          text: "CANCEL",
+          cancelable: true,
+          onDismiss: () => { console.log("cancel") },
+        }
+      ]
+    );
   };
 
   return (
@@ -82,8 +105,8 @@ export default function App() {
         <Text style={styles.header}>Todo List</Text>
         <ScrollView style={styles.items}>
           {
-            tasklist.map((item, index) => {
-              return <Task />;
+            taskList.map((item, index) => {
+              return <Task key={index} title={item} number={index + 1} onDeleteTask={() => handleDeleteTask(index)} />;
             })
           }
         </ScrollView>

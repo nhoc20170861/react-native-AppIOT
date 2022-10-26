@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import color from "../../contains/color";
 
 const styles = StyleSheet.create({
 
@@ -17,15 +18,20 @@ const styles = StyleSheet.create({
         width: 40,
         height: 40,
         borderRadius: 8,
-        backgroundColor: "#58D68D",
         justifyContent: "center",
         alignItems: "center",
+    },
+    even: {
+        backgroundColor: color.blue,
+    },
+    odd: {
+        backgroundColor: color.green,
     },
 
     number: {
         fontSize: 18,
         fontWeight: "700",
-        color: "#fff",
+        color: color.white,
     },
 
     content: {

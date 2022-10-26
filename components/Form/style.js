@@ -25,11 +25,11 @@ const styles = StyleSheet.create({
         width: 46,
         height: 46,
         backgroundColor: color.primary,
-        borderRadius: 20,
+        borderRadius: 25,
         alignItems: "center",
         justifyContent: "center",
         borderWidth: 2,
-        borderColor: '#eff7f8',
+        borderColor: color.background,
 
     },
     icon: {
