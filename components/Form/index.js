@@ -16,14 +16,17 @@ const Form = (props) => {
     return (
         <KeyboardAvoidingView
             behavior={Platform.OS === "ios" ? "padding" : "height"}
-            keyboardVerticalOffset={5}
+            keyboardVerticalOffset={1}
             style={styles.addTask}>
 
             <TextInput
                 value={task}
                 style={styles.input}
                 onChangeText={(text) => setTask(text)}
-                placeholder='Your Task'></TextInput>
+                placeholder='Nhiệm vụ của bạn'
+            >
+
+            </TextInput>
 
             <TouchableOpacity onPress={handleTask}>
                 <View style={styles.iconWrapper}>

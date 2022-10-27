@@ -77,11 +77,11 @@ export default function App() {
   };
   const handleDeleteTask = (index) => {
     Alert.alert(
-      "Alert !!!",
-      "Do you want to delete this task?",
+      "Thông báo !!!",
+      "Bạn muốn xoá nhiệm vụ này",
       [
         {
-          text: "OK",
+          text: "Có",
           onPress: () => {
             let taskListTmp = [...taskList];
             taskListTmp.splice(index, 1);
@@ -90,7 +90,7 @@ export default function App() {
           style: "default"
         },
         {
-          text: "CANCEL",
+          text: "Huỷ",
           cancelable: true,
           onDismiss: () => { console.log("cancel") },
         }
@@ -98,11 +98,15 @@ export default function App() {
     );
   };
 
+
   return (
 
+
     <View style={styles.container}>
+
+
       <View style={styles.body}>
-        <Text style={styles.header}>Todo List</Text>
+        <Text style={styles.header}>Dách sách công việc cần làm</Text>
         <ScrollView style={styles.items}>
           {
             taskList.map((item, index) => {

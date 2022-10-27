@@ -1,15 +1,18 @@
 import { StyleSheet } from "react-native";
+import color from "./contains/color";
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 50,
-        paddingHorizontal: 15,
-        backgroundColor: "#e7feff",
+        backgroundColor: color.background,
         // alignItems: "center",
         // justifyContent: "center",
     },
-
+    body: {
+        flex: 1,
+        paddingTop: 50,
+        paddingHorizontal: 18,
+    },
     header: {
         fontSize: 26,
         fontWeight: "bold",
@@ -17,7 +20,7 @@ const styles = StyleSheet.create({
     },
 
     items: {
-        marginTop: 10,
+        marginTop: 15,
     },
 
 })

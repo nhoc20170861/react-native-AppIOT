@@ -2,8 +2,9 @@ import { StyleSheet } from "react-native";
 import color from "../../contains/color";
 const styles = StyleSheet.create({
     addTask: {
-        flex: 1,
+        marginTop: 10,
         width: '100%',
+        bottom: 30,
         paddingHorizontal: 20,
         flexDirection: "row",
         justifyContent: "space-between",
@@ -11,7 +12,7 @@ const styles = StyleSheet.create({
 
     },
     input: {
-        width: '80%',
+        width: '84%',
         height: 44,
         backgroundColor: color.white,
         borderColor: "blue",
@@ -22,10 +23,10 @@ const styles = StyleSheet.create({
     },
 
     iconWrapper: {
-        width: 46,
-        height: 46,
+        width: 44,
+        height: 44,
         backgroundColor: color.primary,
-        borderRadius: 25,
+        borderRadius: 44,
         alignItems: "center",
         justifyContent: "center",
         borderWidth: 2,
